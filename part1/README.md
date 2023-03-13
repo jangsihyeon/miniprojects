@@ -33,4 +33,21 @@
 ![주소록앱](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/addrbook_1.png)
 
 ![주소록앱](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/addrbook_2.png)
+
+## 파이썬 관련 추가 학습 
+- QR 코드 생성 앱
+  - qrcode 모듈
+  - PyQt
+
+![QR코드앱](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/qr.png)
+
+  - 컴퓨터 정보출력 앱 
+    - psutil  모듈 
+    - socket 모듈
+    - requests 모듈 
+    - PyQt
+
+![QR코드앱](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/info.png)
+
+
 ## 미니 프로젝트 실습 
