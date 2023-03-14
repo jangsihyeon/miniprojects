@@ -49,5 +49,12 @@
 
 ![QR코드앱](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/info.png)
 
+- TTS(Text To Speech)
+  - gtts 모듈
+  - playsound 모듈 
+
+- 암호 해제 프로그램 
+  - itertools, zipfile 기본 모듈   
+
 
 ## 미니 프로젝트 실습 
