@@ -47,7 +47,7 @@
     - requests 모듈 
     - PyQt
 
-![QR코드앱](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/info.png)
+![컴퓨터 정보](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/info.png)
 
 - TTS(Text To Speech)
   - gtts 모듈
@@ -60,7 +60,14 @@
 - 쓰레드 사용법 
   - GUI 와 처리시간이 긴 로직을 실행하면 반드시 쓰레드 사용
 
+![쓰레드 비교](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/thread.png)
+
 - 이메일 보내기 앱 
 
 
+- PyGame
+
 ## 미니 프로젝트 실습 
+- 테스트 앱 만들기 
+
+[팀 리포지토리](https://github.com/PKNU-IOT-1-TEAM/IoT-1Team-MiniProject1)
