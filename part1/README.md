@@ -63,12 +63,17 @@
 ![쓰레드 비교](https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/thread.png)
 
 - 이메일 보내기 앱 
-
+  
 
 - 게임만들기  - DinoRun
   - PyGame 
 
 <img src="https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/pygame.png" width =600/>
+
+<img src="https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/pygame2.png" width =600/>
+
+게임화면 
+
 
 ## 미니 프로젝트 실습 
 - 테스트 앱 만들기 
