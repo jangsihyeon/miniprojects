@@ -74,6 +74,19 @@
 
 게임화면 
 
+- 전국 대학교 위치맵
+  - Pandas
+  - folium
+  - PyQt
+    - QWebEngineView
+
+<img src="https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/folium.png" width =780/>
+
+- 계산기 앱
+  - PyQt
+  - 16개의 signal을 1개의 slot 함수로 처리 
+  
+<img src="https://raw.githubusercontent.com/jangsihyeon/miniprojects/main/images/calc.png" width =250/>
 
 ## 미니 프로젝트 실습 
 - 테스트 앱 만들기 
