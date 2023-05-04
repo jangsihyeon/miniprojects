@@ -6,7 +6,8 @@ IoT 시스템 개발자 미니 프로젝트 리포지토리
 
 
 ## Part2
-미니 프로젝트 Part2
+[미니 프로젝트 Part2](https://github.com/jangsihyeon/miniprojects/tree/main/part2)
+
 
 ## Part3
 미니 프로젝트 Part3
