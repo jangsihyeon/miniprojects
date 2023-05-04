@@ -7,7 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusTestApp", "BogusTestAp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test용", "Test용", "{672156F6-51E8-4658-B326-603CBA00F181}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "시뮬레이션용", "시뮬레이션용", "{E172DDD0-23CB-4CF0-88EF-E28480D4B60B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Subscriber", "MQTT Subscriber", "{E172DDD0-23CB-4CF0-88EF-E28480D4B60B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Publisher", "MQTT Publisher", "{29BBC6B4-BC7F-4AAE-826B-EFB04877B4A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeIotDevice", "FakeIotDevice\FakeIotDevice.csproj", "{6D030636-91A2-40D9-A245-D36FACB97B9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeMonitoringApp", "SmartHomeMonitoringApp\SmartHomeMonitoringApp\SmartHomeMonitoringApp.csproj", "{E3F6949E-4569-4790-9197-72AC54D48296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +25,22 @@ Global
 		{091F671F-E257-4581-8FF4-F350614416BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{091F671F-E257-4581-8FF4-F350614416BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{091F671F-E257-4581-8FF4-F350614416BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D030636-91A2-40D9-A245-D36FACB97B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D030636-91A2-40D9-A245-D36FACB97B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D030636-91A2-40D9-A245-D36FACB97B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D030636-91A2-40D9-A245-D36FACB97B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F6949E-4569-4790-9197-72AC54D48296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F6949E-4569-4790-9197-72AC54D48296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F6949E-4569-4790-9197-72AC54D48296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F6949E-4569-4790-9197-72AC54D48296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{091F671F-E257-4581-8FF4-F350614416BE} = {672156F6-51E8-4658-B326-603CBA00F181}
+		{6D030636-91A2-40D9-A245-D36FACB97B9F} = {29BBC6B4-BC7F-4AAE-826B-EFB04877B4A7}
+		{E3F6949E-4569-4790-9197-72AC54D48296} = {E172DDD0-23CB-4CF0-88EF-E28480D4B60B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32D2F6FA-41E7-452C-990C-5995F80BBFB0}
