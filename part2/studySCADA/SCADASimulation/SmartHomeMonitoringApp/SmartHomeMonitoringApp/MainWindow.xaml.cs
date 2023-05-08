@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using SmartHomeMonitoringApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,13 +31,28 @@ namespace SmartHomeMonitoringApp
         {
             // <Frame> == Page.xaml
             // <ContentControl>==>UserContorl.xaml
-            ActiveItem.Content = new Views.DataBaseControl();
+            // ActiveItem.Content = new Views.DataBaseControl();
         }
+
         // 끝내기 버튼 클릭 이벤트 
         private void MnuExitProgram_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.GetCurrentProcess().Kill(); // 작업 관리자에서 프로세스 종료 
             //Environment.Exit(0);  // 둘중 하나만 쓰면 됨
+        }
+
+        // Mqtt 시작 메뉴 클릭 이벤트 핸들러 
+        private void MnuStartSubscribe_Click(object sender, RoutedEventArgs e)
+        {
+            var mqttPopWin = new MqttPopupWindow();
+            mqttPopWin.Owner = this;
+            mqttPopWin.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            var result = mqttPopWin.ShowDialog();
+
+            if (result == true) 
+            {
+                ActiveItem.Content = new Views.DataBaseControl();
+            }
         }
     }
 }

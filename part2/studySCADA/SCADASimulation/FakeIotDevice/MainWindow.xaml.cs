@@ -84,7 +84,7 @@ namespace FakeIotDevice
                     var jsonValue = JsonConvert.SerializeObject(info, Formatting.Indented);
 
                     // 센서값 MQTT브로커에 전송 (publish)
-                    Client.Publish("SmartHome/ IoTData/", Encoding.Default.GetBytes(jsonValue));
+                    Client.Publish("SmartHome/IoTData/", Encoding.Default.GetBytes(jsonValue));
 
                     // 스레드와 UI 스레드간 충돌이 안나도록 변경
                     this.Invoke(new Action(() =>
