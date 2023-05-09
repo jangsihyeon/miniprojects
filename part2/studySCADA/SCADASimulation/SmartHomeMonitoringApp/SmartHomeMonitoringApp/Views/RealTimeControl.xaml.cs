@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SmartHomeMonitoringApp.Views
 {
     /// <summary>
-    /// DataBaseMonPage.xaml에 대한 상호 작용 논리
+    /// RealTimeControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class DataBaseMonPage : Page
+    public partial class RealTimeControl : UserControl
     {
-        public DataBaseMonPage()
+        public RealTimeControl()
         {
             InitializeComponent();
         }
