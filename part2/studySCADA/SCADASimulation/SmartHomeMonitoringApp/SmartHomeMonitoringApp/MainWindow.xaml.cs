@@ -92,5 +92,33 @@ namespace SmartHomeMonitoringApp
         {
             this.MetroWindow_Closing(sender, new CancelEventArgs());
         }
+
+        private void MnuDataBaseMon_Click(object sender, RoutedEventArgs e)
+        {
+            var userControl = new Views.DataBaseControl();
+            ActiveItem.Content = userControl;
+            StsSelScreen.Content = "DataBase Monitoring"; //typeof(Views.DataBaseControl);
+        }
+
+        private void MnuRealTimeMon_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveItem.Content = new Views.RealTimeControl();
+            StsSelScreen.Content = "RealTime Monitoring"; //typeof(Views.DataBaseControl);
+
+        }
+
+        private void MnuVisualizationMon_Click(object sender, RoutedEventArgs e)
+        {
+            ActiveItem.Content = new Views.VisualizationControl();
+            StsSelScreen.Content = "Visualizstion View";
+        }
+
+        private void MnuAbout_Click(object sender, RoutedEventArgs e)
+        {
+            var about = new About();
+            about.Owner = this;
+            about.ShowDialog();
+        }
     }
-}
+ }
+

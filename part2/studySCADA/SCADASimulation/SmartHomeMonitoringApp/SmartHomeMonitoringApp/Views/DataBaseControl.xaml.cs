@@ -31,6 +31,10 @@ namespace SmartHomeMonitoringApp.Views
 
         Thread MqttTread { get; set; }             //  없으면 UI 처리가 어려워짐
 
+        // 23.05.11 09.29 ksh
+        // Mqtt published json 데이터 건수 체크 변수 
+        int MaxCount { get; set; } = 10;
+
         public DataBaseControl()
         {
             InitializeComponent();
@@ -44,10 +48,23 @@ namespace SmartHomeMonitoringApp.Views
             TxtConnString.Text = Commons.MYSQL_CONNSTIRNG;
 
             IsConnected = false;
+            BtnConnDb.IsChecked = false;
+
+            if(Commons.MQTT_CLIENT != null && Commons.MQTT_CLIENT.IsConnected)
+            {
+                IsConnected = true;
+                BtnConnDb.IsChecked = true;
+                Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived;
+
+            }
         }
 
         // 토글 버튼 클릭 이벤트 핸들러 
         private void BtnConnDb_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectDb();
+        }
+        private void ConnectDb()
         {
             if (IsConnected == false)
             {
@@ -57,12 +74,12 @@ namespace SmartHomeMonitoringApp.Views
                 try
                 {
                     // mqtt subscriber ( 구독할) 로직
-                    if(Commons.MQTT_CLIENT.IsConnected == false)
+                    if (Commons.MQTT_CLIENT.IsConnected == false)
                     {
                         // mqtt 접속 
                         Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived;
                         Commons.MQTT_CLIENT.Connect("MONITOR");  // 클라이언트 아이디 = 모니터 
-                        Commons.MQTT_CLIENT.Subscribe(new string[] {Commons.MQTTTOPIC}, new byte[] {MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE});   // QOS는 네트워크 통신의 옵션 
+                        Commons.MQTT_CLIENT.Subscribe(new string[] { Commons.MQTTTOPIC }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE });   // QOS는 네트워크 통신의 옵션 
                         UpdateLog(">>>> MQTT Broker Connected");
 
                         BtnConnDb.IsChecked = true;
@@ -77,9 +94,9 @@ namespace SmartHomeMonitoringApp.Views
             }
             else
             {
-                try 
+                try
                 {
-                    if(Commons.MQTT_CLIENT.IsConnected)
+                    if (Commons.MQTT_CLIENT.IsConnected)
                     {
                         Commons.MQTT_CLIENT.MqttMsgPublishReceived -= MQTT_CLIENT_MqttMsgPublishReceived;
                         Commons.MQTT_CLIENT.Disconnect();
@@ -90,18 +107,25 @@ namespace SmartHomeMonitoringApp.Views
                         IsConnected = false;
                     }
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
                     UpdateLog($"!!! Mqtt Error 발생 : {ex.Message}");
                 }
-
             }
+
         }
-        
+
         private void UpdateLog (string msg)
         {
             // 예외처리 필요 
             this.Invoke(() => { 
+                if(MaxCount<=0)
+                {
+                    TxtLog.Text = string.Empty;
+                    TxtLog.Text += ">>> 문서 건수가 많아져서 초기화";
+                    TxtLog.ScrollToEnd();
+                    MaxCount = 10;
+                }
                 TxtLog.Text += $"{msg}\n";
                 TxtLog.ScrollToEnd();
             });

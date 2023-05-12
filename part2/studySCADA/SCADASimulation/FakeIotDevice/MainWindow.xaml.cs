@@ -33,7 +33,12 @@ namespace FakeIotDevice
 
         MqttClient Client { get; set; }
 
-        Thread MqttThread { get; set; }
+        Thread MqttThread { get; set; }         // 없으면 UI컨트롤이 어려워짐
+
+        // MQTT  subscribition text 과도 문제 속도 저하를 잡기위해 변수 
+        // 23.05.11 09.29 ksh
+        // Mqtt published json 데이터 건수 체크 변수 
+        int MaxCount { get; set; } = 50;
 
         public MainWindow()
         {
@@ -89,9 +94,17 @@ namespace FakeIotDevice
                     // 스레드와 UI 스레드간 충돌이 안나도록 변경
                     this.Invoke(new Action(() =>
                     {
+                        if (MaxCount <= 0)
+                        {
+                            RtbLog.SelectAll();
+                            RtbLog.Selection.Text = string.Empty;
+                            MaxCount = 50;
+                        }
                         // RtbLog에 출력 
-                       RtbLog.AppendText($"{jsonValue}\n");
+                        RtbLog.AppendText($"{jsonValue}\n");
                         RtbLog.ScrollToEnd();  // 스크롤 제일 밑으로 보내기 
+                        MaxCount--;
+                        RtbLog.AppendText(">>>> 문서 건수가 너무 많아져서 초기화");
                     }));
 
                     // 1초 동안 대기 

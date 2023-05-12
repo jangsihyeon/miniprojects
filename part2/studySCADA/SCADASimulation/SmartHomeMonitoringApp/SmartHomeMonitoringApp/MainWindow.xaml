@@ -57,19 +57,19 @@
                         <iconPacks:PackIconJamIcons Kind="Screen" />
                     </MenuItem.Icon>
 
-                    <MenuItem x:Name="MnuDataBaseMon" Header="DB 모니터링">
+                    <MenuItem x:Name="MnuDataBaseMon" Header="DB 모니터링" Click="MnuDataBaseMon_Click">
                         <MenuItem.Icon>
                             <iconPacks:PackIconFeatherIcons Kind="Database" /> 
                         </MenuItem.Icon>
                     </MenuItem>
                     
-                    <MenuItem x:Name="MnuRealTimeMon" Header="실시간 모니터링">
+                    <MenuItem x:Name="MnuRealTimeMon" Header="실시간 모니터링" Click="MnuRealTimeMon_Click">
                         <MenuItem.Icon>
                             <iconPacks:PackIconMaterial Kind="GaugeLow" />
                         </MenuItem.Icon>
                     </MenuItem>
 
-                    <MenuItem x:Name="MnuVisualizationMon" Header="시각화">
+                    <MenuItem x:Name="MnuVisualizationMon" Header="시각화" Click="MnuVisualizationMon_Click">
                         <MenuItem.Icon>
                             <iconPacks:PackIconMaterial Kind="ChartMultiple" />
                         </MenuItem.Icon>
@@ -87,7 +87,7 @@
                         <iconPacks:PackIconMaterial Kind="Help" />
                     </MenuItem.Icon>
                     
-                    <MenuItem x:Name="MnuAbout" Header="이 프로그램">
+                    <MenuItem x:Name="MnuAbout" Header="이 프로그램" Click="MnuAbout_Click">
                         <MenuItem.Icon>
                             <iconPacks:PackIconUnicons Kind="ShieldExclamation" />
                         </MenuItem.Icon>
