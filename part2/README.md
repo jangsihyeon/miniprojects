@@ -18,6 +18,6 @@
 	- 대용량 데이터 차트는 OxyChart를 사용 
 	
 
-MiniProject2_Final : 온습도 더미데이터 시뮬레이션
+MiniProject2_Final : 온습도 더미데이터 시뮬레이션 & 스마트홈 모니터링(+시각화)앱 
 
 ![mini_2](https://github.com/jangsihyeon/miniprojects/assets/123913911/13956f7f-eb2f-4044-83b1-4ba46a20dd6e)
