@@ -13,4 +13,9 @@
 	- OxyChart
 
 - SmartHome 시스템 문제점
-	- 실행 후 시간이 소요되면 UI 제어가 느려짐 
+	- 실행 후 시간이 소요되면 UI 제어가 느려짐 - 해결 !
+	- LiveCharts는 대용량 데이터 차느는 무리 (LiveCharts v.2 동일)
+	- 대용량 데이터 차트는 OxyChart를 사용 
+	
+MiniProject2_Final
+![mini_2](https://github.com/jangsihyeon/miniprojects/assets/123913911/13956f7f-eb2f-4044-83b1-4ba46a20dd6e)
